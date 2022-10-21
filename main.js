@@ -61,4 +61,4 @@ app.use('/files', express.static('public'));
 
 app.use('/garbage', garbageRouter);
 
-app.use((req, res) => res.redirect('/main/news'));
+// app.use((req, res) => res.redirect('/main/news'));
