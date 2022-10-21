@@ -4,7 +4,7 @@
   "description": "Разработка кейса \"Площадка для студентов и сотрудников ВУЗа\" от команды Жаба Скриптеры",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js",
+    "start": "PRODUCTION=true node main.js",
     "dev": "nodemon main.js"
   },
   "repository": {
