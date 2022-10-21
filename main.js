@@ -16,7 +16,7 @@ mongoose.connect(settings.base);
 const app = express();
 const HTTPServer = http.createServer(app);
 
-app.use((req, res) => console.log(req.originalUrl));
+app.use((req, res) => console.log(req.secure));
 
 // Запуск сайта на сервере с HTTPS
 if (production) {
