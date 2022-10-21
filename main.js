@@ -17,7 +17,7 @@ const app = express();
 const HTTPServer = http.createServer(app);
 
 // Запуск сайта на сервере с HTTPS
-if production {
+if (production) {
 	const HTTPSServer = https.createServer({
 		cert: fs.readFileSync(path.join(process.cwd(), 'ssl', 'cert.pem')),
 		key: fs.readFileSync(path.join(process.cwd(), 'ssl', 'key.pem'))
@@ -30,9 +30,8 @@ if production {
 
 	// Запуск HTTP и HTTPS сервера на портах 80 и 443
 	HTTPServer.listen(80)
-		.then(HTTPSServer.listen(443))
-		.then(console.log('Server started with SSL'));
-} else HTTPServer.listen(80).then(console.log('Server started in dev mode'));
+		.then(HTTPSServer.listen(443), _ => console.log('Server started with SSL'));
+} else HTTPServer.listen(80, _ => console.log('Server started in dev mode'));
 
 // Временная заглушка
 app.get('/main/news', (req, res) => res.end('Ok'));
