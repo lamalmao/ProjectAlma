@@ -7,9 +7,15 @@ mongoose.connect(settings.base);
 
 const app = express();
 
-//Временная заглушка
+// Временная заглушка
+
+
+// Подключение статики
+app.use('/files', express.static('public'));
 
 app.get('/main/news', (req, res) => res.end('Ok'));
 app.use((req, res) => res.redirect('/main/news'));
+
+
 
 app.listen(80);
