@@ -27,7 +27,9 @@ if (production) {
 
 	// Переадресация с HTTP на HTTPS
 	app.use((req, res) => {
-		if (!req.secure) res.redirect(`https://${req.hostname}${req.originalUrl}`);
+		let re = `https://${req.hostname}${req.originalUrl}`;
+		console.log(re);
+		if (!req.secure) res.redirect(re);
 	});
 
 	// Запуск HTTP и HTTPS сервера на портах 80 и 443
