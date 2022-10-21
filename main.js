@@ -29,7 +29,15 @@ if (production) {
 	});
 
 	// Запуск HTTP и HTTPS сервера на портах 80 и 443
-	HTTPServer.listen(80, settings.host, _ => HTTPSServer.listen(443, settings.host, _ => console.log('Server started with SSL')));
+	HTTPServer.listen({
+		port: 80,
+		host: settings.host
+	}, _ => {
+		HTTPSServer.listen({
+			port: 443,
+			host: settings.host
+		}, _ => console.log('Server started with SSL'))
+	});
 } else HTTPServer.listen(80, _ => console.log('Server started in dev mode'));
 
 // Временная заглушка
