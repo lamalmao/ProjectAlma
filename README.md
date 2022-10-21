@@ -16,10 +16,14 @@ git clone https://github.com/lamalmao/ProjectAlma.git
 npm install
 npm run dev
 ```
->Затем в браузере
-```
-localhost
-```
+*Переименуйте* файл настроек и *настройте* подключение к БД
+
+>settings_blank.js -> settings.js
+>base: mongodb://логин:пароль@laesia.site/site
+
+Затем в браузере *откройте*
+
+>localhost
 
 # Инструменты
 
