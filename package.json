@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "PRODUCTION=true node main.js",
+    "unix": "sudo PRODUCTION=true node main.js",
     "dev": "nodemon main.js"
   },
   "repository": {
