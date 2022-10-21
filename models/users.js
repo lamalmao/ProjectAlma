@@ -32,8 +32,7 @@ const User = new Schema({
 		unique: true
 	},
 	phone: {
-		type: String,
-		unique: true
+		type: String
 	},
 	group: String,
 	groupList: Array,
