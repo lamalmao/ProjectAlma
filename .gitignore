@@ -106,3 +106,5 @@ dist
 settings.js
 
 ssl/**
+
+.crt
