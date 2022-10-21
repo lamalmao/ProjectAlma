@@ -19,6 +19,7 @@ npm run dev
 *Переименуйте* файл настроек и *настройте* подключение к БД
 
 >settings_blank.js -> settings.js
+
 >base: mongodb://логин:пароль@laesia.site/site
 
 Затем в браузере *откройте*
