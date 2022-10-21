@@ -28,8 +28,6 @@ if (production) {
 		if (!req.secure) res.redirect(`https://${req.hostname}${req.originalUrl}`);
 	});
 
-	console.log(settings.host);
-
 	// Запуск HTTP и HTTPS сервера на портах 80 и 443
 	HTTPServer.listen({
 		port: 80,
