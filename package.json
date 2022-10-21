@@ -1,0 +1,36 @@
+{
+  "name": "projectalma",
+  "version": "1.0.0",
+  "description": "Разработка кейса \"Площадка для студентов и сотрудников ВУЗа\" от команды Жаба Скриптеры",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamalmao/ProjectAlma.git"
+  },
+  "author": "ЖабаСкриптеры",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lamalmao/ProjectAlma/issues"
+  },
+  "homepage": "https://github.com/lamalmao/ProjectAlma#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.6",
+    "passport": "^0.6.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  }
+}
