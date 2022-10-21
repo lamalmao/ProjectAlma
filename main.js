@@ -16,16 +16,6 @@ mongoose.connect(settings.base);
 const app = express();
 const HTTPServer = http.createServer(app);
 
-app.use((req, res) => console.log(req.secure));
-
-// Временная заглушка
-app.get('/main/news', (req, res) => res.end('Ok'));
-
-// Подключение статики
-app.use('/files', express.static('public'));
-
-app.use((req, res) => res.redirect('/main/news'));
-
 // Запуск сайта на сервере с HTTPS
 if (production) {
 	const HTTPSServer = https.createServer({
@@ -43,11 +33,20 @@ if (production) {
 			host: settings.host
 		}, _ => console.log('Server started with SSL'))
 	});
-	
+
 	// Переадресация с HTTP на HTTPS
-	app.use((req, res) => {
-		let re = `https://${req.hostname}${req.originalUrl}`;
-		console.log(re);
-		if (!req.secure) res.redirect(re);
+	app.use((req, res, next) => {
+		if (!req.secure) res.redirect(`https://${req.hostname}${req.originalUrl}`);
+		else next();
 	});
 } else HTTPServer.listen(80, _ => console.log('Server started in dev mode'));
+
+
+
+// Временная заглушка
+app.get('/main/news', (req, res) => res.end('Ok'));
+
+// Подключение статики
+app.use('/files', express.static('public'));
+
+app.use((req, res) => res.redirect('/main/news'));
