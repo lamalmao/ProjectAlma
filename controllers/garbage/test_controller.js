@@ -1,5 +1,7 @@
 const nodemailer = require('nodemailer');
 module.exports = function(req, res) {
+	console.log('Send mail');
+
 	let mailTransporter = nodemailer.createTransport({
 		host: 'smtp.gmail.com',
 		auth: {
