@@ -5,6 +5,15 @@ const { mongoose } = require('mongoose');
 const fs = require('fs');
 const path = require('path');
 
+// Подключение роутеров
+// const mainRouter = require('./routes/main_router');
+// const apiRouter = require('./routes/api_router');
+// const signinRouter = require('./routes/signin_router');
+// const signupRouter = require('./routes/signup_router');
+// const adminRouter = require('./routes/admin_router');
+// const profileRouter = require('./routes/profile_router');
+const garbageRouter = require('./routes/garbage_router');
+
 const settings = require('./settings');
 
 const production = process.env.PRODUCTION || false;
@@ -41,12 +50,15 @@ if (production) {
 	});
 } else HTTPServer.listen(80, _ => console.log('Server started in dev mode'));
 
-
-
-// Временная заглушка
-app.get('/main/news', (req, res) => res.end('Ok'));
-
 // Подключение статики
 app.use('/files', express.static('public'));
+
+// Подключение роутеров
+// app.use('/main', mainRouter);
+// app.use('/profile', profileRouter);
+// app.use('/admin', adminRouter);
+// app.use('/api', apiRouter);
+
+app.use('/garbage', garbageRouter);
 
 app.use((req, res) => res.redirect('/main/news'));
