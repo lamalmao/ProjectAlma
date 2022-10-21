@@ -18,6 +18,16 @@ const HTTPServer = http.createServer(app);
 
 app.use((req, res) => console.log(req.secure));
 
+
+
+// Временная заглушка
+app.get('/main/news', (req, res) => res.end('Ok'));
+
+// Подключение статики
+app.use('/files', express.static('public'));
+
+app.use((req, res) => res.redirect('/main/news'));
+
 // Запуск сайта на сервере с HTTPS
 if (production) {
 	const HTTPSServer = https.createServer({
@@ -43,11 +53,3 @@ if (production) {
 		}, _ => console.log('Server started with SSL'))
 	});
 } else HTTPServer.listen(80, _ => console.log('Server started in dev mode'));
-
-// Временная заглушка
-app.get('/main/news', (req, res) => res.end('Ok'));
-
-// Подключение статики
-app.use('/files', express.static('public'));
-
-app.use((req, res) => res.redirect('/main/news'));
