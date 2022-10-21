@@ -9,6 +9,18 @@
 
 [Таблица маршрутов](https://docs.google.com/spreadsheets/d/1ZnV2uxRCv0PQeozxkxVF2pe3JshnAZnnObwkWCyEefY/edit?usp=sharing)
 
+# Установка и запуск
+
+```
+git clone https://github.com/lamalmao/ProjectAlma.git
+npm install
+npm run dev
+```
+>Затем в браузере
+```
+localhost
+```
+
 # Инструменты
 
 ## База данных
