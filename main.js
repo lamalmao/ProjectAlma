@@ -18,8 +18,6 @@ const HTTPServer = http.createServer(app);
 
 app.use((req, res) => console.log(req.secure));
 
-
-
 // Временная заглушка
 app.get('/main/news', (req, res) => res.end('Ok'));
 
@@ -35,13 +33,6 @@ if (production) {
 		key: fs.readFileSync(path.join(process.cwd(), 'ssl', 'key.pem'))
 	}, app);
 
-	// Переадресация с HTTP на HTTPS
-	app.use((req, res) => {
-		let re = `https://${req.hostname}${req.originalUrl}`;
-		console.log(re);
-		if (!req.secure) res.redirect(re);
-	});
-
 	// Запуск HTTP и HTTPS сервера на портах 80 и 443
 	HTTPServer.listen({
 		port: 80,
@@ -51,5 +42,12 @@ if (production) {
 			port: 443,
 			host: settings.host
 		}, _ => console.log('Server started with SSL'))
+	});
+	
+	// Переадресация с HTTP на HTTPS
+	app.use((req, res) => {
+		let re = `https://${req.hostname}${req.originalUrl}`;
+		console.log(re);
+		if (!req.secure) res.redirect(re);
 	});
 } else HTTPServer.listen(80, _ => console.log('Server started in dev mode'));
