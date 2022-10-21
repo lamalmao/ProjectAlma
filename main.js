@@ -12,8 +12,7 @@ const production = process.env.PRODUCTION || false;
 // Подключение к БД
 mongoose.connect(settings.base);
 
-// Иницализация
- приложения Express и http, https серверов
+// Иницализация приложения Express и http, https серверов
 const app = express();
 const HTTPServer = http.createServer(app);
 
