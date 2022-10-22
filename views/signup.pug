@@ -1,0 +1,23 @@
+extends layout.pug
+block content
+	.form
+		h1= 'Регистрация'
+		.input-form
+			select.input-form#role
+				option= 'Студент'
+				option= 'Преподаватель'
+				option= 'Сотрудник'
+		.input-form
+		  input#fullname(type='text' placeholder='ФИО')
+		.input-form
+		  input#group(type='text' placeholder='Группа')
+		.input-form
+		  input#signId(type='text' placeholder='Номер зачетки')
+		.input-form
+		  input#email(type='email' placeholder='Почта')
+		.input-form
+		  input#login111(type='text' placeholder='Логин')
+		.input-form
+		  input#password(type='password' placeholder='Пароль')
+		.input-form
+		  input#submit(type='submit' value='Зарегистироваться')
