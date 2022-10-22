@@ -1,6 +1,7 @@
 const https = require('https');
 const http = require('http');
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const { mongoose } = require('mongoose');
 const fs = require('fs');
 const path = require('path');
@@ -18,6 +19,10 @@ const signinController = require('./controllers/auth/signin_controller');
 const signupController = require('./controllers/auth/signup_controller');
 const resetController = require('./controllers/auth/reset_controller');
 
+// Контроллер проверки почты
+
+const checkMailController = require('./controllers/check_mail_controller');
+
 const settings = require('./settings');
 
 const production = process.env.PRODUCTION || false;
@@ -33,6 +38,7 @@ const HTTPServer = http.createServer(app);
 app.set('view engine', 'pug');
 // Подключение парсера тела сообщения
 app.use(express.json());
+app.use(cookieParser());
 
 // Запуск сайта на сервере с HTTPS
 if (production) {
@@ -67,6 +73,9 @@ app.use('/files', express.static('public'));
 app.get('/signin', signinController);
 app.get('/signup', signupController);
 app.get('/forget', resetController);
+
+app.get('/check', checkMailController);
+
 app.get('/schedule', (req, res) => {
 	res.sendFile(process.cwd() + '/schedule-template/index.html');
 });

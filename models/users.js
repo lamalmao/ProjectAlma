@@ -35,6 +35,11 @@ const User = new Schema({
 	phone: {
 		type: String
 	},
+	verified: {
+		type: Boolean,
+		required: true,
+		default: false
+	},
 	group: String,
 	groupList: Array,
 	profession: String

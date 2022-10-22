@@ -24,7 +24,7 @@ module.exports = async function(target,fullname) {
 
 С уважением, https://laesia.site.
 
-Сообщение сгенерировано автоматически, не отвечайте на него.`,
+Сообщение сгенерировано автоматически, на него отвечать не надо.`,
     };
 
     let result = await mailTransporter.sendMail(mailDetails);
