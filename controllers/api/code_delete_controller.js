@@ -4,7 +4,7 @@ async function deleteCode(req, res) {
 	try {
 		var msg = 'Ok', status = 200;
 		const code = {
-			value: req.body.code.toString().trim()
+			value: req.body.value.toString().trim()
 		}
 		result = await codes.deleteOne({
 			value: code.value
