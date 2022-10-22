@@ -15,7 +15,7 @@ module.exports = async function(target, fullname) {
     });
 
     let mailDetails = {
-        from: 'sendernodejs@gmail.com',
+        from: 'laayze@yandex.ru',
         to: target,
         subject: 'Проверочный код',
         text: `Здравствуйте, ${fullname}
