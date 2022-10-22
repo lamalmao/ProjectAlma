@@ -1,3 +1,3 @@
 module.exports = function(req, res) {
-	// code
+	res.render('signin', { title: 'Авторизация' });
 };

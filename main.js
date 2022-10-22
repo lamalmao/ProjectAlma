@@ -8,11 +8,15 @@ const path = require('path');
 // Подключение роутеров
 // const mainRouter = require('./routes/main_router');
 // const apiRouter = require('./routes/api_router');
-// const signinRouter = require('./routes/signin_router');
-// const signupRouter = require('./routes/signup_router');
 // const adminRouter = require('./routes/admin_router');
 // const profileRouter = require('./routes/profile_router');
 const garbageRouter = require('./routes/garbage_router');
+
+// Контроллеры авторизации
+
+const signinController = require('./controllers/auth/signin_controller');
+const signupController = require('./controllers/auth/signup_controller');
+const resetController = require('./controllers/auth/reset_controller');
 
 const settings = require('./settings');
 
@@ -24,6 +28,9 @@ mongoose.connect(settings.base);
 // Иницализация приложения Express и http, https серверов
 const app = express();
 const HTTPServer = http.createServer(app);
+
+// Подключение pug движка
+app.set('view engine', 'pug');
 
 // Запуск сайта на сервере с HTTPS
 if (production) {
@@ -52,6 +59,12 @@ if (production) {
 
 // Подключение статики
 app.use('/files', express.static('public'));
+
+// Авторизация
+
+app.get('/signin', signinController);
+app.get('/signup', signupController);
+app.get('/forget'. resetController);
 
 // Подключение роутеров
 // app.use('/main', mainRouter);
