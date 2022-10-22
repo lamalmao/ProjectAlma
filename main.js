@@ -64,7 +64,11 @@ app.use('/files', express.static('public'));
 
 app.get('/signin', signinController);
 app.get('/signup', signupController);
-app.get('/forget'. resetController);
+app.get('/forget', resetController);
+app.get('/schedule', (req, res) => {
+	res.sendFile(process.cwd() + '/schedule-template/index.html');
+});
+
 
 // Подключение роутеров
 // app.use('/main', mainRouter);
