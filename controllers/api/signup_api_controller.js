@@ -4,10 +4,15 @@ const codes = require('../../models/codes');
 async function createUser(req, res) {
 	try {
 		const data = req.body;
-		let code = await codes.findOneAndDelete({ value: data.code }, 'value role'), msg;
+		if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(data.email)) throw new Error('Введенная почта неверна');
+		else if (data.login.includes(' ')) throw new Error('Логин не должен содержать пробелы')
+		console.log(data);
+		const code = await codes.findOne( { value: data.code }, 'value role');
+		var msg = 'Ok';
+		var status = 200;
 		if (!code) throw new Error('Регистрационный код неверен');
 		let user = await users.create({
-			signID: code,
+			signID: code.value,
 			role: code.role,
 			login: data.login,
 			password: data.password,
@@ -18,14 +23,13 @@ async function createUser(req, res) {
 			groupList: data.groupList ? data.groupList : [],
 			profession: code.profession ? code.profession : ''
 		});
-		status = 200;
-		msg = 'Ok';
+		await codes.deleteOne( { value: code.value } );
 	} catch(e) {
-		let status = 401;
-		msg = e.message;
-		console.log(e);
+		status = 401;
+		if (e.code === 11000) msg = 'Такой пользователь уже существует';
+		else msg = e.message;
 	} finally {
-		res.status(status).res({message: msg});
+		res.status(status).send( { message: msg } );
 	}
 }
 

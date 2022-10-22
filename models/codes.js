@@ -6,7 +6,11 @@ const Code = new Schema({
 		unique: true,
 		required: true
 	},
-	role: String
+	role: {
+		type: String,
+		required: true,
+		default: 'student'
+	}
 });
 
 module.exports = model('codes', Code);

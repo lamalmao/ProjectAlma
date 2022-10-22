@@ -7,7 +7,7 @@ const path = require('path');
 
 // Подключение роутеров
 // const mainRouter = require('./routes/main_router');
-// const apiRouter = require('./routes/api_router');
+const apiRouter = require('./routes/api_router');
 // const adminRouter = require('./routes/admin_router');
 // const profileRouter = require('./routes/profile_router');
 const garbageRouter = require('./routes/garbage_router');
@@ -31,6 +31,8 @@ const HTTPServer = http.createServer(app);
 
 // Подключение pug движка
 app.set('view engine', 'pug');
+// Подключение парсера тела сообщения
+app.use(express.json());
 
 // Запуск сайта на сервере с HTTPS
 if (production) {
@@ -74,7 +76,7 @@ app.get('/schedule', (req, res) => {
 // app.use('/main', mainRouter);
 // app.use('/profile', profileRouter);
 // app.use('/admin', adminRouter);
-// app.use('/api', apiRouter);
+app.use('/api', apiRouter);
 
 app.use('/garbage', garbageRouter);
 
