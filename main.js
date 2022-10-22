@@ -90,4 +90,5 @@ app.use('/api', apiRouter);
 
 app.use('/garbage', garbageRouter);
 
-// app.use((req, res) => res.redirect('/main/news'));
+// Временный редирек на регистрацию
+app.use((req, res) => res.redirect('/signup'));
