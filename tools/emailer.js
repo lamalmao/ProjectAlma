@@ -1,13 +1,16 @@
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
-module.exports = async function(target,fullname) {
+module.exports = async function(target, fullname) {
     let token = crypto.randomBytes(8).toString('hex');
 
     let mailTransporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
+        // host: 'smtp.gmail.com',
+        service: 'yandex',
         auth: {
-            user: 'sendernodejs@gmail.com',
-            pass: 'iwovimbhzkficdaq'
+            // user: 'sendernodejs@gmail.com',
+            // pass: 'iwovimbhzkficdaq'
+            user: 'laayze@yandex.ru',
+            pass: '42024202c'
         }
     });
 
