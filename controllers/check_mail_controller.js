@@ -11,7 +11,7 @@ async function checkMail(req, res) {
 		let check = await confirms.findOneAndDelete( { token: token } );
 		if (!check) throw new Error('Unknown token');
 
-		await users.updateOne( { _id }, {
+		await users.updateOne( { _id: check.user }, {
 			$set: {
 				verified: true
 			}
