@@ -3,6 +3,8 @@ const confirms = require('../models/confirms');
 
 async function checkMail(req, res) {
 	try {
+		console.log(req.body);
+
 		const token = req.body.q;
 		if (!token) throw new Error('No token specified');
 
