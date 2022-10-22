@@ -3,9 +3,9 @@ const confirms = require('../models/confirms');
 
 async function checkMail(req, res) {
 	try {
-		console.log(req.body);
+		console.log(req.query);
 
-		const token = req.body.q;
+		const token = req.query.q;
 		if (!token) throw new Error('No token specified');
 
 		let check = await confirms.findOneAndDelete( { token: token } );
