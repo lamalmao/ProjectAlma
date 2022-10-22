@@ -27,4 +27,5 @@ module.exports = function(req, res) {
 	} catch(e) {
 		// statements
 		console.log(e);
+	}
 };
