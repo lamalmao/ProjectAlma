@@ -1,8 +1,7 @@
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
-
-module.exports = async function(target, reason='new') {
-    let token = crypto.randomBytes(3).toString('hex');
+module.exports = async function(target,fullname) {
+    let token = crypto.randomBytes(8).toString('hex');
 
     let mailTransporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
@@ -15,8 +14,17 @@ module.exports = async function(target, reason='new') {
     let mailDetails = {
         from: 'sendernodejs@gmail.com',
         to: target,
-        subject: 'Password replace',
-        text: `https://laesia.site/check?q=${token}&r=${reason}`,
+        subject: 'Проверочный код',
+        text: `Здравствуйте, ${fullname}
+
+Вы получили данное сообщение, так как адрес электронной почты ${target} был использован при регистрации в личном кабинете на сайте https://laesia.site
+Для подтверждения адреса электронной почты перейдите по следующей ссылке https://laesia.site/check?q=${token}
+Ссылка подтверждения будет действительна в течение 72 часов.
+Если вы не регистрировались, проигнорируйте данное сообщение.
+
+С уважением, https://laesia.site.
+
+Сообщение сгенерировано автоматически, не отвечайте на него.`,
     };
 
     let result = await mailTransporter.sendMail(mailDetails);
