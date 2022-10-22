@@ -37,6 +37,7 @@ const HTTPServer = http.createServer(app);
 // Подключение pug движка
 app.set('view engine', 'pug');
 // Подключение парсера тела сообщения
+app.use(express.urlencoded( { extented: true } ));
 app.use(express.json());
 app.use(cookieParser());
 
