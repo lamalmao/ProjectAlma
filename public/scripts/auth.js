@@ -6,7 +6,7 @@ async function auth(url, req) {
 		},
 		redirect: 'follow',
 		body: {
-			JSON.stringify(req);
+			JSON.stringify(req)
 		}
 	});
 	if (res.status !== 200) alert(res.json().body.msg);
