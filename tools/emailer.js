@@ -10,7 +10,7 @@ module.exports = async function(target, fullname) {
             // user: 'sendernodejs@gmail.com',
             // pass: 'iwovimbhzkficdaq'
             user: 'laayze@yandex.ru',
-            pass: '42024202c'
+            pass: 'wtnjqxvrauamhgst'
         }
     });
 
