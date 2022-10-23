@@ -14,17 +14,28 @@
 	<link rel="stylesheet" href="/files/styles/background.css">
 	<link rel="stylesheet" href="/files/styles/Css_News.css">
 	<link rel="stylesheet" href="/files/styles/shedule_log_style.css">
+
+
+
+	<link rel="stylesheet" href="/public/styles/schedule/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="/public/styles/schedule/style.css"> <!-- Resource style -->
+
+	<link rel="stylesheet" href="/public/styles/login.css">
+	<link rel="stylesheet" href="/public/styles/schedule.css">
+	<link rel="stylesheet" href="/public/styles/style.css">
+	<link rel="stylesheet" href="/public/styles/background.css">
+	<link rel="stylesheet" href="/public/styles/Css_News.css">
+	<link rel="stylesheet" href="/public/styles/shedule_log_style.css">
 	<title></title>
 </head>
 <body>
 <nav>
 	<div class="nav_left">
-		<img src="../images/logo3.png" class="logo">
-
+		<img src="public/images/logo3.png" class="logo">
 	</div>
 	<div class="nav-right">
 		<div class="search-box">
-			<img src="../images/search.png" alt=""> <!-- Иконка лупы -->
+			<img src="public/images/search.png" alt=""> <!-- Иконка лупы -->
 			<input type="text" placeholder="Search">
 		</div>
 		<div class="nav-user-icon online" id="settings-menu" onclick="settingsMenuToggle()">
@@ -49,7 +60,7 @@
 
 			<div class="settings-links">
 				<img src="../images/group.png" class="settings-icon">
-				<a href="#">Профиль <img src="../images/arrow.png" width="10px"></a>
+				<a href="/profile">Профиль <img src="../images/arrow.png" width="10px"></a>
 			</div>
 
 			<div class="settings-links">
@@ -96,13 +107,13 @@
 				<div class="top-info"><span>Понедельник</span></div>
 
 				<ul>
-					<li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+					<li class="single-event" data-start="09:30" data-end="10:30" data-content="algoritmes_and_structures" data-event="event-1">
 						<a href="#0">
 							<em class="event-name">Алгоритмы и Структуры Данных</em>
 						</a>
 					</li>
 
-					<li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
+					<li class="single-event" data-start="11:00" data-end="12:30" data-content="OOP" data-event="event-2">
 						<a href="#0">
 							<em class="event-name">Обьектно-Ориентированное Программирование</em>
 						</a>
@@ -113,7 +124,7 @@
 							<em class="event-name">Методы Вычислений</em>
 						</a>
 					</li>
-					<li class="single-event" data-start="16:30" data-end="18:00" data-content="event-abs-circuit" data-event="event-1">
+					<li class="single-event" data-start="16:30" data-end="18:00" data-content="algoritmes_and_structures" data-event="event-1">
 						<a href="#0">
 							<em class="event-name">Алгоритмы и Структуры Данных</em>
 						</a>
@@ -125,25 +136,25 @@
 				<div class="top-info"><span>Вторник</span></div>
 
 				<ul>
-					<li class="single-event" data-start="10:00" data-end="11:30"  data-content="event-rowing-workout" data-event="event-2">
+					<li class="single-event" data-start="10:00" data-end="11:30"  data-content="OOP" data-event="event-2">
 						<a href="#0">
 							<em class="event-name">Обьектно-Ориентированное Программирование</em>
 						</a>
 					</li>
 
-					<li class="single-event" data-start="11:30" data-end="13:00"  data-content="event-restorative-yoga" data-event="event-4">
+					<li class="single-event" data-start="11:30" data-end="13:00"  data-content="OS" data-event="event-4">
 						<a href="#0">
 							<em class="event-name">Операционные Системы и Оболочки</em>
 						</a>
 					</li>
 
-					<li class="single-event" data-start="13:30" data-end="15:00" data-content="event-abs-circuit" data-event="event-1">
+					<li class="single-event" data-start="13:30" data-end="15:00" data-content="algoritmes_and_structures" data-event="event-1">
 						<a href="#0">
 							<em class="event-name">Алгоритмы и Структуры Данных</em>
 						</a>
 					</li>
 
-					<li class="single-event" data-start="15:45" data-end="16:45"  data-content="event-yoga-1" data-event="event-3">
+					<li class="single-event" data-start="15:45" data-end="16:45"  data-content="Metods_of_equle" data-event="event-3">
 						<a href="#0">
 							<em class="event-name">Методы Вычислений</em>
 						</a>
@@ -155,25 +166,25 @@
 				<div class="top-info"><span>Среда</span></div>
 
 				<ul>
-					<li class="single-event" data-start="09:00" data-end="10:15" data-content="event-restorative-yoga" data-event="event-4">
+					<li class="single-event" data-start="09:00" data-end="10:15" data-content="OOP" data-event="event-4">
 						<a href="#0">
 							<em class="event-name">Обьектно-Ориентированное Программирование</em>
 						</a>
 					</li>
 
-					<li class="single-event" data-start="10:45" data-end="11:45" data-content="event-yoga-1" data-event="event-3">
+					<li class="single-event" data-start="10:45" data-end="11:45" data-content="Metods_of_equle" data-event="event-3">
 						<a href="#0">
 							<em class="event-name">Методы Вычислений</em>
 						</a>
 					</li>
 
-					<li class="single-event" data-start="12:00" data-end="13:45"  data-content="event-rowing-workout" data-event="event-2">
+					<li class="single-event" data-start="12:00" data-end="13:45"  data-content="OOP" data-event="event-2">
 						<a href="#0">
 							<em class="event-name">Обьектно-Ориентированное Программирование</em>
 						</a>
 					</li>
 
-					<li class="single-event" data-start="13:45" data-end="15:00" data-content="event-yoga-1" data-event="event-3">
+					<li class="single-event" data-start="13:45" data-end="15:00" data-content="Metods_of_equle" data-event="event-3">
 						<a href="#0">
 							<em class="event-name">Методы Вычислений</em>
 						</a>
@@ -185,25 +196,25 @@
 				<div class="top-info"><span>Четверг</span></div>
 
 				<ul>
-					<li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+					<li class="single-event" data-start="09:30" data-end="10:30" data-content="algoritmes_and_structures" data-event="event-1">
 						<a href="#0">
 							<em class="event-name">Алгоритмы и Структуры Данных</em>
 						</a>
 					</li>
 
-					<li class="single-event" data-start="12:00" data-end="13:45" data-content="event-restorative-yoga" data-event="event-4">
+					<li class="single-event" data-start="12:00" data-end="13:45" data-content="OS" data-event="event-4">
 						<a href="#0">
 							<em class="event-name">Операционные Системы и Оболочки</em>
 						</a>
 					</li>
 
-					<li class="single-event" data-start="15:30" data-end="16:30" data-content="event-abs-circuit" data-event="event-1">
+					<li class="single-event" data-start="15:30" data-end="16:30" data-content="algoritmes_and_structures" data-event="event-1">
 						<a href="#0">
 							<em class="event-name">Алгоритмы и Структуры Данных</em>
 						</a>
 					</li>
 
-					<li class="single-event" data-start="17:00" data-end="18:30"  data-content="event-rowing-workout" data-event="event-2">
+					<li class="single-event" data-start="17:00" data-end="18:30"  data-content="OOP" data-event="event-2">
 						<a href="#0">
 							<em class="event-name">Обьектно-Ориентированное Программирование</em>
 						</a>
@@ -215,19 +226,19 @@
 				<div class="top-info"><span>Пятница</span></div>
 
 				<ul>
-					<li class="single-event" data-start="10:00" data-end="11:30"  data-content="event-rowing-workout" data-event="event-2">
+					<li class="single-event" data-start="10:00" data-end="11:30"  data-content="OOP" data-event="event-2">
 						<a href="#0">
 							<em class="event-name">Обьектно-Ориентированное Программирование</em>
 						</a>
 					</li>
 
-					<li class="single-event" data-start="12:30" data-end="14:00" data-content="event-abs-circuit" data-event="event-1">
+					<li class="single-event" data-start="12:30" data-end="14:00" data-content="algoritmes_and_structures" data-event="event-1">
 						<a href="#0">
 							<em class="event-name">Алгоритмы и Структуры Данных</em>
 						</a>
 					</li>
 
-					<li class="single-event" data-start="15:45" data-end="16:45"  data-content="event-yoga-1" data-event="event-3">
+					<li class="single-event" data-start="15:45" data-end="16:45"  data-content="Metods_of_equle" data-event="event-3">
 						<a href="#0">
 							<em class="event-name">Методы Вычислений</em>
 						</a>
