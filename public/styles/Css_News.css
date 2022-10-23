@@ -59,18 +59,26 @@ nav {
 
 .nav-user-icon {
     margin-left: 30px;
+    display: inline-flex;
+    top:  4px;
+}
+
+.search-item {
+    position: relative;
+    display: inline-flex;
 }
 
 
 .search-box {
     background: #efefef;
-    width: 350px;
+    width: 330px;
     height: 35px;
     border-radius: 20px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     padding: 0 15px;
-    
+    position: relative;
+    bottom: 15px;
 }
 
 .search-box img {   
@@ -80,9 +88,14 @@ nav {
 .search-box input {
     width: 100%;
     background: transparent;
-    padding: 10;
+    padding: 10px;
     outline: none;
     border: 0;
+}
+
+.nav-right-item {
+    display: inline-block;
+    /*padding: 0;*/
 }
 
 .online {
@@ -309,5 +322,9 @@ nav {
 
     .container {
         padding: 0;
+    }
+
+    .search-box {
+        display: none;
     }
 }
