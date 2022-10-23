@@ -1,0 +1,22 @@
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+<div id = 'messages'></div>
+<script src='/socket.io/socket.io.js'></script>
+<script>
+    let socket = io();
+
+    let messages = document.querySelector('#messages');
+    socket.on('send message', function(message) {
+        console.log('ddd');
+        var message = document.createElement('div'),
+            messageText = document.createElement('div'),
+            name = document.createElement('div');
+        name.innerHTML = message.author;
+        messageText.innerHTML = message.text;
+        message.append(name);
+        message.append(messageText);
+        messages.prepend(message);
+    });
+</script>
+    </head>

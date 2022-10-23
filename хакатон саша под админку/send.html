@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+<textarea id = 'text'></textarea>
+<input type = 'button' id = 'submit' value = 'Отправить'>
+<script src='/socket.io/socket.io.js'></script>
+<script>
+    var socket = io(),
+    author = 'Sasha',
+    submit = document.querySelector('#submit'),
+    text = document.querySelector('#text');
+    
+    submit.onclick = function() {
+        socket.emit('send message', {author: author, text: text.value});
+        text.value = '';
+    };
+</script>
+    </head>
