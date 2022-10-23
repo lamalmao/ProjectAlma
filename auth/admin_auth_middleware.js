@@ -7,6 +7,7 @@ async function adminCheckAuth(req, res, next) {
 		const auth = req.cookies.auth;
 		console.log(auth);
 		let check = await jwt.verify(auth, token);
+		console.log(check);
 		if (!check) throw new Error('Необходима авторизация');
 		else if(check.role !== 'administrator') throw new Error('Нет доступа');
 		else next();

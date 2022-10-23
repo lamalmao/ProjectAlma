@@ -20,6 +20,17 @@ nav {
     z-index: 100;
 }
 
+.nav-button {
+    position: relative;
+    display: inline-block;
+    height: inherit;
+    text-decoration: None;
+    color: #eee;
+    font-size: 24px;
+    left: -30%;
+    font-family: Tahoma;
+}
+
 .logo {
     width: 110px;
     margin-right: 45px;
@@ -118,7 +129,7 @@ nav {
     width: 20%;
     flex-basis: 47%;
     background: #fff;
-    
+    margin: 0 auto;
 }
 
 .write-post-container {
@@ -279,22 +290,24 @@ nav {
     color: #626262;
 }
 
+@media screen and (max-width: 1000px) {
+    .nav-button {
+        left: -12%;
+    }
 
+    .search-box {
+        /*display: block;*/
+        width: 100px;
+        position: relative;
+        /*right: 50px;*/
+    }
 
+    .main-content {
+        width: 440px;
+        margin: 0 auto;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .container {
+        padding: 0;
+    }
+}

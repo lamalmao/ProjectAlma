@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Подключение роутеров
-// const mainRouter = require('./routes/main_router');
+const mainRouter = require('./routes/main_router');
 const apiRouter = require('./routes/api_router');
 // const adminRouter = require('./routes/admin_router');
 // const profileRouter = require('./routes/profile_router');
@@ -83,7 +83,7 @@ app.get('/schedule', (req, res) => {
 
 
 // Подключение роутеров
-// app.use('/main', mainRouter);
+app.use('/main', mainRouter);
 // app.use('/profile', profileRouter);
 // app.use('/admin', adminRouter);
 app.use('/api', apiRouter);
@@ -91,4 +91,4 @@ app.use('/api', apiRouter);
 app.use('/garbage', garbageRouter);
 
 // Временный редирек на регистрацию
-app.use((req, res) => res.redirect('/signup'));
+// app.use((req, res) => res.redirect('/signup'));

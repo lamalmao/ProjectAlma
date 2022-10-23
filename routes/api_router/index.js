@@ -3,6 +3,8 @@ const { Router } = require('express');
 const adminAuthMiddleware = require('../../auth/admin_auth_middleware');
 const userAuthMiddleware = require('../../auth/user_auth_middleware');
 
+// console.log(adminAuthMiddleware);
+
 // const newsApiRouter = require('./news_api.js');
 // const appealsApiRouter = require('./appeals_api.js');
 // const scheduleApiRouter = require('./schedule_api.js');

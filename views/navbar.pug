@@ -1,15 +1,35 @@
 nav
 	.nav_left
-		img.logo(src='files/images/your_logo.png')
-		a(href='#')
-			img(src='files/images/message.png')
-		a(href='#')
-			img(src='files/images/notification.png')
-		a(href='#')
-			img(src='files/images/video.png')
+		img.logo(src='/files/images/logo3.png')
+	a.nav-button(href='/main/news')= 'Новости'
 	.nav_right
 		.search-box
-			img(src='files/images/search.png', alt='search_img')
+			img(src='/files/images/search.png', alt='search_img')
 			input(type='text', placeholder='Поиск')
-		.nav-user-icon.online
-			img(src='files/images/profile-pic.png')
+	if user
+		.settig-menu
+			setting-menu-inner
+				.user-profile
+					img(src='//files/images/profile-pic.png')
+					div
+						p= user.fullname
+						a(href='#')= user.login
+				hr
+				.user-profile
+					img(src='//files/images/profile-study.png')
+					div
+						p= 'Расписание'
+						a(href='#')= 'Здесь вы можите посмотреть расписание своей группы'
+				hr
+				.settings-links
+					img.settings-icon(src='/files/images/group.png')
+					a(href='#') = 'Профиль'
+						img(src='/files/images/arrow.png' width='10px')
+					.settings-links
+					img.settings-icon(src='/files/images/feedback.png')
+					a(href='#') = 'Новости'
+						img(src='/files/images/arrow.png' width='10px')
+					.settings-links
+					img.settings-icon(src='/files/images/logout.png')
+					a(href='#exit') = 'Выход'
+						img(src='/flles/images/arrow.png' width='10px')

@@ -1,0 +1,20 @@
+extends layout.pug
+block content
+	.container
+		.main-content
+			each val, index in news
+				.post-container
+					.user-profile
+						img(src = '/files/images/profile-pic.png')
+						div
+							p= val.author
+							span= val.date
+					div
+						h1= val.title
+						p.post-text= val.text
+						each tag in val.tags
+							- var color = 'post-text-red'
+							if tag === '#Студенческая жизнь'
+								- color= 'post-text-blue'
+							p(class=color)= tag
+					img.post-img(src= val.img)
