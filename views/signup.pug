@@ -3,7 +3,7 @@ block content
 	.form( action="/signup" method="post")
 		h1= 'Регистрация'
 		.input-form
-			select.input-form#role
+			select.input-form#role(onmouseup='change()')
 				option= 'Студент'
 				option= 'Преподаватель'
 				option= 'Сотрудник'
