@@ -4,9 +4,24 @@ const parse = require('../../tools/parser');
 async function updateSchedule(req, res) {
 	try {
 		if (!req.file) throw new Error('Отправьте файл');
-		console.log(req.file.filename);
-		let sch = parse(req.file.filename);
-		console.log(sch);
+		let sch = parse(req.file.filename), tasks = [];
+		for (let i = 0; i < sch.length; i++) {
+			let iId = {
+				group: sch[i].group,
+				date: sch[i].date,
+				time: sch[i].time
+			};
+			if (sch[i].type === 'Delete') {
+				tasks.push(schedule.deleteOne(iId));
+			} else {
+				let c = schedule.findOne({
+				}).then(item => {
+					if(item) {
+						
+					}
+				});
+			}
+		}
 		res.send( { msg: 'Ok' } );
 	} catch(e) {
 		console.log(e);

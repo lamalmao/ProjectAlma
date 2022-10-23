@@ -6,30 +6,35 @@ nav
 		.search-box
 			img(src='/files/images/search.png', alt='search_img')
 			input(type='text', placeholder='Поиск')
-	if user
-		.settig-menu
-			setting-menu-inner
+		.nav-user-icon.online#settings-menu(onclick='settingsMenuToggle();')
+			img(src='/files/images/profile-pic.svg')
+	.settig-menu
+			.setting-menu-inner
+				if user
+					.user-profile
+						img(src='/files/images/profile-pic.png')
+						div
+							p= user.fullname
+							a(href='#')= user.login
+					hr
 				.user-profile
-					img(src='//files/images/profile-pic.png')
+					img(src='/files/images/profile-study.png')
 					div
-						p= user.fullname
-						a(href='#')= user.login
-				hr
-				.user-profile
-					img(src='//files/images/profile-study.png')
-					div
-						p= 'Расписание'
-						a(href='#')= 'Здесь вы можите посмотреть расписание своей группы'
+						p Расписание
+						a(href='#') Здесь вы можите посмотреть расписание своей группы
 				hr
 				.settings-links
 					img.settings-icon(src='/files/images/group.png')
-					a(href='#') = 'Профиль'
+					a(href='#')
+						| Профиль 
 						img(src='/files/images/arrow.png' width='10px')
-					.settings-links
+				.settings-links
 					img.settings-icon(src='/files/images/feedback.png')
-					a(href='#') = 'Новости'
+					a(href='#')
+						| Новости
 						img(src='/files/images/arrow.png' width='10px')
-					.settings-links
+				.settings-links
 					img.settings-icon(src='/files/images/logout.png')
-					a(href='#exit') = 'Выход'
-						img(src='/flles/images/arrow.png' width='10px')
+					a(href='#')
+						| Выход 
+						img(src='/files/images/arrow.png' width='10px')
