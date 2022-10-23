@@ -38,7 +38,7 @@
                 <img src="../images/profile-study.png">
                 <div>
                     <p>Расписание</p>
-                    <a href="#">Здесь вы можите посмотреть расписание своей группы</a>
+                    <a href="#">Здесь вы можете посмотреть расписание своей группы</a>
                 </div>
             </div>
 
@@ -62,12 +62,14 @@
     </div>
 </nav>
 
-<h1>Расписание кинуть эксель</h1>
-<form action="/testpost" method="post" enctype="multipart/form-data">
-    <label>Файл</label><br>
-    <input type="file" name="filedata" /><br><br>
-    <input type="submit" value="отправить в базу" />
-</form>
+<div class="tamlir" align-items="center">
+    <h1>Расписание кинуть эксель</h1>
+    <form action="/testpost" method="post" enctype="multipart/form-data">
+        <label>Файл</label><br>
+        <input type="file" name="filedata" /><br><br>
+        <input type="submit" value="отправить в базу" />
+    </form>
+</div>
 
 <h1>Письма полученные админами от студентов</h1>
 <div class="buttons">
@@ -77,6 +79,8 @@
         <div class="buttons__button buttons__button_two">Письмо 3</div>
     </div>
 </div>
+
+<div></div>
 <div class="modal" data-modal="two">
     <div class="modal__wrapper">
         <div class="modal__body">
@@ -116,6 +120,17 @@
 
 
     <h1>Список Пользователей</h1>
+            <input id = 'id' placeholder = 'ID'>
+            <input id = 'name' placeholder = 'ФИО'>
+            <input id = 'group' placeholder = 'Группа'>
+            <input id = 'number' placeholder = 'Номер зачётки'>
+            <input id = 'email' placeholder = 'Электронная почта'>
+            <input id = 'login' placeholder = 'Логин'>
+            <input id = 'password' placeholder = 'Пароль'>
+            <input type = 'button' id = 'submit' value = 'Изменить'>
+            <input type = 'button' id = 'delete' value = 'Удалить'>
+            <input type = 'button' id = 'adding' value = 'Добавить'>
+            <input type = 'button' id = 'block' value = 'Блокировать/разблокировать'>
         <table id = 'users'>
             <tr>
                 <th>ID</th>
@@ -173,17 +188,6 @@
                 <td>нет</td>
             </tr>
         </table>
-        <input id = 'id' placeholder = 'ID'>
-        <input id = 'name' placeholder = 'ФИО'>
-        <input id = 'group' placeholder = 'Группа'>
-        <input id = 'number' placeholder = 'Номер зачётки'>
-        <input id = 'email' placeholder = 'Электронная почта'>
-        <input id = 'login' placeholder = 'Логин'>
-        <input id = 'password' placeholder = 'Пароль'>
-        <input type = 'button' id = 'submit' value = 'Изменить'>
-        <input type = 'button' id = 'delete' value = 'Удалить'>
-        <input type = 'button' id = 'add' value = 'Добавить'>
-        <input type = 'button' id = 'block' value = 'Блокировать/разблокировать'>
         <style>
             #users {
                 border-collapse: collapse;
@@ -216,6 +220,7 @@
                 submit = document.querySelector('#submit'),
                 del = document.querySelector('#delete'),
                 block = document.querySelector('#block');
+                add = document.querySelector('#adding');
             trs = Array.from(trs);
             users.onclick = function() {
                 if (trs.indexOf(event.target) != 0) {
@@ -261,6 +266,21 @@
                         };
                     };
                 };
+            };
+            add.onclick = function() {
+                let tr = document.createElement('tr'),
+                    trText;
+                trText = '<td>' + id.value + '</td>';
+                trText += '<td>' + name.value + '</td>';
+                trText += '<td>' + group.value + '</td>';
+                trText += '<td>' + number.value + '</td>';
+                trText += '<td>' + email.value + '</td>';
+                trText += '<td>' + login.value + '</td>';
+                trText += '<td>' + password.value + '</td>';
+                trText += '<td>student</td>';
+                trText += '<td>нет</td>';
+                tr.innerHTML = trText;
+                users.append(tr);
             };
         </script>
 <script>src="css_script.js"</script>

@@ -20,13 +20,15 @@
     border: 4px solid #786dc1;
 
 }
-
+.
 .count {
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
 }
-
+.settings-links{
+    settings-links:cen
+}
 @font-face {
     font-family: Pompadur; /* Имя шрифта */
     src: url(fonts/RobotoCondensed-Italic.ttf); /* Путь к файлу со шрифтом */
