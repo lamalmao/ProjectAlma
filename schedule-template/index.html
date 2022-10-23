@@ -20,30 +20,66 @@
 	<link rel="stylesheet" href="/public/styles/schedule.css">
 	<link rel="stylesheet" href="/public/styles/style.css">
 	<link rel="stylesheet" href="/public/styles/background.css">
+	<link rel="stylesheet" href="/public/styles/shedule_log_style.css">
+	<link rel="stylesheet" href="/public/styles/Css_News.css">
 	<title></title>
 </head>
 <body>
-
 <nav>
 	<div class="nav_left">
-		<img src="/files/images/your_logo.png" class="logo">
-
-		<a href="#"><img src="/files/images/message.png" alt="alt"></a>
-		<a href="#"><img src="/files/images/notification.png"></a>
-		<a href="#"><img src="/files/images/video.png"></a>
+		<img src="../images/logo3.png" class="logo">
 
 	</div>
 	<div class="nav-right">
 		<div class="search-box">
-			<img src="/files/images/search.png" alt=""> <!-- Иконка лупы -->
+			<img src="../images/search.png" alt=""> <!-- Иконка лупы -->
 			<input type="text" placeholder="Search">
 		</div>
-		<div class="nav-user-icon online">
-			<img src="/files/images/profile-pic.png"   > <!-- Икoнка юзера -->
+		<div class="nav-user-icon online" id="settings-menu" onclick="settingsMenuToggle()">
+			<img src="../images/profile-pic.png"> <!-- Икoнка юзера -->
+		</div>
+	</div>
+	<!---------------------- settings-menu------------------------>
+	<div class="settig-menu">
+		<div class="setting-menu-inner">
+			<div class="user-profile">
+				<img src="../images/profile-pic.png">
+				<div>
+					<p>Ф.И.О</p>
+					<a href="#">Админ</a>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="user-profile">
+				<img src="../images/profile-study.png">
+				<div>
+					<p>Расписание</p>
+					<a href="#">Здесь вы можите посмотреть расписание своей группы</a>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="settings-links">
+				<img src="../images/group.png" class="settings-icon">
+				<a href="#">Профиль <img src="../images/arrow.png" width="10px"></a>
+			</div>
+
+			<div class="settings-links">
+				<img src="../images/feedback.png" class="settings-icon">
+				<a href="#">Новости<img src="../images/arrow.png" width="10px"></a>
+			</div>
+
+			<div class="settings-links">
+				<img src="../images/logout.png" class="settings-icon">
+				<a href="#">Выход <img src="../images/arrow.png" width="10px"></a>
+			</div>
 		</div>
 	</div>
 </nav>
-
+<!--<h1 class="shedule_log_style">Расписание</h1>-->
 <div class="cd-schedule loading">
 	<div class="timeline">
 		<ul>

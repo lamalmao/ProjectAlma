@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Сайт</title>
+        <link rel="stylesheet" href="/public/styles/Css_News.css">
+    </head>
+<body>
+<nav>
+    <div class="nav_left">
+        <img src="../images/logo3.png" class="logo">
+
+    </div>
+    <div class="nav-right">
+        <div class="search-box">
+            <img src="../images/search.png" alt=""> <!-- Иконка лупы -->
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="nav-user-icon online" id="settings-menu" onclick="settingsMenuToggle()">
+            <img src="../images/profile-pic.png"> <!-- Икoнка юзера -->
+        </div>
+    </div>
+    <!---------------------- settings-menu------------------------>
+    <div class="settig-menu">
+        <div class="setting-menu-inner">
+            <div class="user-profile">
+                <img src="../images/profile-pic.png">
+                <div>
+                    <p>Ф.И.О</p>
+                    <a href="#">Админ</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="user-profile">
+                <img src="../images/profile-study.png">
+                <div>
+                    <p>Расписание</p>
+                    <a href="#">Здесь вы можите посмотреть расписание своей группы</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="settings-links">
+                <img src="../images/group.png" class="settings-icon">
+                <a href="#">Профиль <img src="../images/arrow.png" width="10px"></a>
+            </div>
+
+            <div class="settings-links">
+                <img src="../images/feedback.png" class="settings-icon">
+                <a href="#">Новости<img src="../images/arrow.png" width="10px"></a>
+            </div>
+
+            <div class="settings-links">
+                <img src="../images/logout.png" class="settings-icon">
+                <a href="#">Выход <img src="../images/arrow.png" width="10px"></a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <div class="container">
+    <!---------------left-sidebar-------------------------->
+        <div class="left-sidebar">
+        
+        </div>
+    <!---------------main-content   -------------------------->
+        <div class="main-content">
+            <div class="write-post-container">
+                <!--<div class="user-profile">
+                    <img src="images/profile-pic.png">
+                    <div>
+                        <p>Человек</p>
+                        <small>Админ</small>
+                    </div>
+                </div>
+
+                <div class="post-input-continer">
+                    <textarea rows="3" placeholder="Как ваши дела ?"></textarea>
+                </div>
+            </div>-->
+
+            <div class="post-container">
+                <div class="user-profile">
+                    <img src="images/profile-pic.png">
+                    <div>
+                        <p>Сотрудник 1</p>
+                        <span>Июль 24 2021, 13:40</span>
+                    </div>
+
+                </div>
+                <div>
+                    <h1>КИБЕРСПОРТИВНЫЙ СТУДЕНЧЕСКИЙ КЛУБ ДГТУ ПОЛУЧИЛ ГРАНТ НА ПРОВЕДЕНИЕ КУБКА РОССИЙСКОГО СТУДЕНЧЕСТВА ПО COUNTER-STRIKE</h1>
+                    <p class="post-text">
+                        С 1 июля по 30 ноября 2023 года ДГТУ проведет всероссийские соревнования по компьютерному спорту «Кубок российского студенчества по Counter-Strike». <br>
+                        Проект стал победителем второго сезона заочного конкурса «Росмолодежь.Гранты» в номинации #создавай_возможности, выиграв грант в размере 700 000 рублей. </p><p class="post-text-red ">#Мероприятия</p>
+                    <img src="images/feed-image-1.png" class="post-img">
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="user-profile">
+                    <img src="images/profile-pic.png">
+                    <div>
+                        <p>Сотрудник 2</p>
+                        <span>Июль 20 2021, 15:30</span>
+                    </div>
+                </div>
+                <div>
+                    <h1>В ДГТУ ЗАВЕРШИЛОСЬ ПОВЫШЕНИЕ КВАЛИФИКАЦИИ ДЛЯ ПРОФЕССОРСКО-ПРЕПОДАВАТЕЛЬСКОГО СОСТАВА</h1>
+                    <p class="post-text">
+                        Программа для профессорско-преподавательского состава вузов  «Актуальные вопросы преподавания в образовательных учреждениях высшего образования: нормативно-правовое, психолого-педагогическое и методическое сопровождение» реализовывалась с 29 августа по 19 октября.<br>
+                        Ее разработал коллектив авторов ДГТУ. Занятия провели представители ДГТУ и других ведущих российских университетов.<br>
+                        – Мы непрерывно запрашивали и обрабатывали обратную связь от слушателей по всем запланированным мероприятиям, что позволяло оперативно адаптировать образовательную программу под целевую аудиторию каждого потока.<br>
+                        Команда университета получила большое количество положительных отзывов о качестве и актуальности нашей программы квалификации для интеграции новых территорий в образовательное пространство РФ, <br>
+                        мастерстве спикеров и высокой информативности раздаточных материалов, – рассказала начальник управления дополнительного образования ДГТУ Людмила Алексеенко.
+                        – Это только начало нашего длинного пути сотрудничества и взаимообмена. <br>
+                        Разрабатываем сейчас по запросу коллег профильные программы повышения квалификации.</p><p class="post-text-red">#Мероприятия</p>
+                    <img src="images/feed-image-1.png" class="post-img">
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="user-profile">
+                    <img src="images/profile-pic.png">
+                    <div>
+                        <p>Сотрудник 3</p>
+                        <span>Октябрь 21 2022, 13:40</span>
+                    </div>
+                </div>
+                <h1>В ДГТУ СТАРТОВАЛ ХАКАТОН AUTUMN 2022</h1>
+                <p class="post-text">В Донском государственном техническом университете 21 октября открылся XI форум программных разработчиков и мехатроников города Ростова-на-Дону «Хакатон Autumn 2022».
+                    Он продлится до 23 октября.</p><p class="post-text-blue ">#Студенческая жизнь</p>
+                <img src="images/feed-image-3.png" class="post-img">
+            </div>
+
+
+
+        </div>
+    <!---------------right-sidebar-------------------------->
+        <div class="right-sidebar">
+        
+        </div>
+    </div>
+    <div class="footer">
+        <p>Хакатон 2022 - Вебпрактик ЖабаСкриптеры</p>
+        </div>
+    <script>
+        var settingsmenu = document.getElementById("settings-menu");
+
+        function settingsMenuToggle(){
+            console.log(settingsmenu);
+            settingsmenu.classList.toggle("settig-menu-h");
+        }
+    </script>
+    </div>
+</body>
+</html>

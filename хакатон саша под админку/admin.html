@@ -1,7 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-    <body>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="main_modale.css"/>
+    <link rel="stylesheet" href="/public/styles/Css_News.css">
+</head>
+<body>
+<nav>
+    <div class="nav_left">
+        <img src="../images/logo3.png" class="logo">
+
+    </div>
+    <div class="nav-right">
+        <div class="search-box">
+            <img src="../images/search.png" alt=""> <!-- Иконка лупы -->
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="nav-user-icon online" id="settings-menu" onclick="settingsMenuToggle()">
+            <img src="../images/profile-pic.png"> <!-- Икoнка юзера -->
+        </div>
+    </div>
+    <!---------------------- settings-menu------------------------>
+    <div class="settig-menu">
+        <div class="setting-menu-inner">
+            <div class="user-profile">
+                <img src="../images/profile-pic.png">
+                <div>
+                    <p>Ф.И.О</p>
+                    <a href="#">Админ</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="user-profile">
+                <img src="../images/profile-study.png">
+                <div>
+                    <p>Расписание</p>
+                    <a href="#">Здесь вы можите посмотреть расписание своей группы</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="settings-links">
+                <img src="../images/group.png" class="settings-icon">
+                <a href="#">Профиль <img src="../images/arrow.png" width="10px"></a>
+            </div>
+
+            <div class="settings-links">
+                <img src="../images/feedback.png" class="settings-icon">
+                <a href="#">Новости<img src="../images/arrow.png" width="10px"></a>
+            </div>
+
+            <div class="settings-links">
+                <img src="../images/logout.png" class="settings-icon">
+                <a href="#">Выход <img src="../images/arrow.png" width="10px"></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<h1>Расписание кинуть эксель</h1>
+<form action="/testpost" method="post" enctype="multipart/form-data">
+    <label>Файл</label><br>
+    <input type="file" name="filedata" /><br><br>
+    <input type="submit" value="отправить в базу" />
+</form>
+
+<h1>Письма полученные админами от студентов</h1>
+<div class="buttons">
+    <div class="buttons__flex">
+        <div class="buttons__button buttons__button_two">Письмо 1</div>
+        <div class="buttons__button buttons__button_two">Письмо 2</div>
+        <div class="buttons__button buttons__button_two">Письмо 3</div>
+    </div>
+</div>
+<div class="modal" data-modal="two">
+    <div class="modal__wrapper">
+        <div class="modal__body">
+            <div class="modal__inner">
+                <div class="modal__close">Close</div>
+                <div class="modal__title">Письмо студента</div>
+                <div class="modal__text">Текст письма </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <h1>Список Пользователей</h1>
         <table id = 'users'>
             <tr>
@@ -34,6 +147,29 @@
                 <td>morkt111@yandex.ru</td>
                 <td>iramorktum</td>
                 <td>qwerty</td>
+                <td>admin</td>
+                <td>нет</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Алексеенко А. В.</td>
+                <td>ВМО-21</td>
+                <td>1234869</td>
+                <td>akimcom2@yandex.ru</td>
+                <td>rsgvtrbtm</td>
+                <td>qwerty</td>
+                <td>student</td>
+                <td>нет</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Подрез К. В.</td>
+                <td>ВМО-21</td>
+                <td>218549</td>
+                <td>podrez7474@yandex.ru</td>
+                <td>cuck_old</td>
+                <td>staraya_padla</td>
+                <td>admin</td>
                 <td>нет</td>
             </tr>
         </table>
