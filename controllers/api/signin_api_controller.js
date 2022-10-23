@@ -7,6 +7,7 @@ const users = require('../../models/users');
 
 async function authHandler(req, res) {
 	try {
+
 		const data = req.body;
 		if (!data.login || !data.password) throw new Error('Не указаны данные для авторизации');
 
@@ -23,7 +24,8 @@ async function authHandler(req, res) {
 
 		const authToken = await jwt.sign( { id: user._id, role: user.role }, token);
 		res.cookie('auth', authToken);
-		res.redirect('/main/news');
+		res.send( { msg: 'Ok' } );
+		// res.redirect('/main/news');
 	} catch(e) {
 		res.status(401).send( { msg: e.message } );
 	}
