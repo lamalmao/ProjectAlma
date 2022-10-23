@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/public/styles/Css_News.css">
+  <link rel="stylesheet" href="/public/styles/cabinet.css">
+</head>
+<body>
+<nav>
+  <div class="nav_left">
+    <img src="../images/logo3.png" class="logo">
+
+  </div>
+  <div class="nav-right">
+    <div class="search-box">
+      <img src="../images/search.png" alt=""> <!-- Иконка лупы -->
+      <input type="text" placeholder="Search">
+    </div>
+    <div class="nav-user-icon online" id="settings-menu" onclick="settingsMenuToggle()">
+      <img src="../images/profile-pic.png"> <!-- Икoнка юзера -->
+    </div>
+  </div>
+  <!---------------------- settings-menu------------------------>
+  <div class="settig-menu">
+    <div class="setting-menu-inner">
+      <div class="user-profile">
+        <img src="../images/profile-pic.png">
+        <div>
+          <p>Ф.И.О</p>
+          <a href="#">Админ</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="user-profile">
+        <img src="../images/profile-study.png">
+        <div>
+          <p>Расписание</p>
+          <a href="#">Здесь вы можете посмотреть расписание своей группы</a>
+        </div>
+      </div>
+
+      <hr>
+
+
+      <div class="settings-links">
+        <img src="../images/feedback.png" class="settings-icon">
+        <a href="#">Новости<img src="../images/arrow.png" width="10px"></a>
+      </div>
+
+      <div class="settings-links">
+        <img src="../images/logout.png" class="settings-icon">
+        <a href="#">Выход <img src="../images/arrow.png" width="10px"></a>
+      </div>
+    </div>
+  </div>
+</nav>
+<script src="css_script.js"></script>
+
+<div class="frame0">
+  <div class="frame1">
+    <div><h2 class="text-1">Личный кабинет пользователя</h2>
+    </div>
+    <div> <img src="../images/profile-pic.png">
+    </div>
+    <div class="count"><h4>Фамилия:</h4>
+      <h4>Егоров</h4>
+    </div>
+    <div class="count"><h4>Имя:</h4>
+        <h4>Роман</h4>
+    </div>
+    <div class="count"><h4>Отчество:</h4>
+      <h4>Летович</h4>
+    </div>
+
+  <div class="count"><h4>Год рождения:</h4>
+    <h4>20.03.2002</h4>
+  </div>
+
+  <div class="count"><h4>Логин:</h4>
+    <h4 class="text-1">letov</h4>
+  </div>
+
+  <div class="count"><h4>Зачетка:</h4><!--<div><h4>Код предприятия</h4></div> -->
+    <h4>546463</h4>
+  </div>
+  <div class="count"><h4>Почта:</h4>
+    <h4>letov@gmail.com</h4>
+  </div>
+  <div class="count"><h4>Роль:</h4>
+    <h4 class="text-1">student</h4>
+  </div>
+  </div>
+
+
+
+
+  <div class="frame2">
+    <div class="write-post-container">
+    <div class="user-profile">
+      <img src="images/profile-pic.png">
+      <div>
+        <p>Егоров Роман Летович</p>
+        <small>Студент</small>
+      </div>
+    </div>
+    <!---------------Типо обращене к ректару    -------------------------->
+    <div class="post-input-continer">
+      <textarea rows="3" placeholder=""></textarea>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <h3>Изменить фото профиля:</h3>
+<form action="/photo_upload" method="post" enctype="multipart/form-data">
+  <input type="file" name="profile" />
+  <input type="submit" value="Изменить фото" />
+</form>
+</div>
+</body>
+</html>
