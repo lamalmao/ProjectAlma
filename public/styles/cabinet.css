@@ -52,7 +52,7 @@
 @media screen and (max-width: 700px) {
     .frame0 {
         align-items: stretch;
-        display: inline-block;
+        display: block;
         vertical-align: middle;
         /*padding: 15px;*/
         margin: 0 auto;
@@ -61,14 +61,16 @@
     .frame1 {
         display: block;
         flex-direction: column;
-        width: 100%;
+        /*width: 100%;*/
         /*margin: 0 auto;*/
+        width: 85%;
     }
 
     .frame2 {
         display: block;
         flex-direction: column;
-        width: 100%;
+        /*width: 100%;*/
         /*margin: 0 auto;*/
+        width: 85%;
     }
 }
