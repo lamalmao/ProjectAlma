@@ -232,12 +232,12 @@ nav {
     overflow: hidden;
     top: 108%;
     right: 5%;
-    max-height: 450px;
+    max-height: 0px;
     transition: max-height 0.3s;
 }
 
 .settig-menu-h {
-    max-height: 0px;
+    max-height: 450px;
 }
 
 .user-profile a {

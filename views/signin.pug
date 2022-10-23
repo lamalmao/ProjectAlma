@@ -1,6 +1,6 @@
 extends layout.pug
 block content
-  .form
+  .form( action="/signin" method="post")
     h1= 'Вход'
     .input-form
       input#login(type='text' placeholder='Логин')
